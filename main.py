@@ -5,8 +5,8 @@ from telebot.types import ReplyKeyboardMarkup
 from flask import Flask
 import threading
 
-TOKEN = os.getenv("8447058713:AAG7jkj0DyFRO09q82tfBnulaUhZUEObAvc")
-ADMIN_ID = os.getenv("7787109849")
+TOKEN = os.environ.get("8447058713:AAG7jkj0DyFRO09q82tfBnulaUhZUEObAvc")
+ADMIN_ID = 7787109849
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -205,6 +205,7 @@ if __name__ =="__main__":
     port = int(os.environ.get("PORT", 10000))
 
     app.run(host="0.0.0.0", port=port)
+
 
 
 
